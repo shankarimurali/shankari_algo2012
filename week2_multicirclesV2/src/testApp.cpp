@@ -31,13 +31,13 @@ void testApp::draw(){
 		float radius = ofMap(i, 0, mouseX+mouseY+50, 0, 450, true);
 		float something=ofMap(mouseY+mouseX, 0, 1440+900, 100, 10, true);
 		float angle = ofGetElapsedTimef() * (10+ i/ 10.0)/something;
-		float x = xorig + radius * cos(angle) + ofRandom(-5,5);
-		float y = yorig + radius * -sin(angle) + ofRandom(-5,5);
+		float x = xorig + radius * cos(angle) + ofRandom(-3,3);
+		float y = yorig + radius * -sin(angle) + ofRandom(-3,3);
 		
 		ofSetRectMode(OF_RECTMODE_CENTER);
 		float color=ofMap(radius, 0, 200, 0, 255, true);
 		ofSetColor(color,ofRandom(0,255),ofRandom(0,255));
-		ofRect(x, y, 1.4, 1.4);
+		ofRect(x, y, 1.5, 1.5);
 	
 	}	
 		
