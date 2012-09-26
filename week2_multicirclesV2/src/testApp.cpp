@@ -26,9 +26,9 @@ void testApp::draw(){
 	float yorig = ofGetHeight()/2;
 	ofEnableAlphaBlending();
 	
-	for (int i = 0; i < 2000; i++){
+	for (int i = 0; i < mouseX+mouseY+50; i++){
 	
-		float radius = ofMap(i, 0, 2000, 0, 450, true);
+		float radius = ofMap(i, 0, mouseX+mouseY+50, 0, 450, true);
 		float something=ofMap(mouseY+mouseX, 0, 1440+900, 100, 10, true);
 		float angle = ofGetElapsedTimef() * (10+ i/ 10.0)/something;
 		float x = xorig + radius * cos(angle) + ofRandom(-5,5);
@@ -37,7 +37,7 @@ void testApp::draw(){
 		ofSetRectMode(OF_RECTMODE_CENTER);
 		float color=ofMap(radius, 0, 200, 0, 255, true);
 		ofSetColor(color,ofRandom(0,255),ofRandom(0,255));
-		ofRect(x, y, 1.2, 1.2);
+		ofRect(x, y, 1.4, 1.4);
 	
 	}	
 		
