@@ -29,8 +29,8 @@ void testApp::draw(){
 	for (int i = 0; i < 2000; i++){
 	
 		float radius = ofMap(i, 0, 2000, 0, 450, true);
-		float something=ofMap(mouseY+mouseX, 0, 1440+900, 2, 50, true);
-		float angle = ofGetElapsedTimef() * (10+ i/ 20.0)/something;
+		float something=ofMap(mouseY+mouseX, 0, 1440+900, 100, 10, true);
+		float angle = ofGetElapsedTimef() * (10+ i/ 10.0)/something;
 		float x = xorig + radius * cos(angle) + ofRandom(-5,5);
 		float y = yorig + radius * -sin(angle) + ofRandom(-5,5);
 		
