@@ -15,7 +15,7 @@ void testApp::setup(){
 		particle myParticle2;
 		myParticle.setInitialCondition(ofRandom(0,ofGetWidth()),ofRandom(0,50),0,0);
 		particles.push_back(myParticle);
-	
+		
 	}
 	
 	VF.setupField(150,150,ofGetWidth(), ofGetHeight());
@@ -24,7 +24,7 @@ void testApp::setup(){
 
 //--------------------------------------------------------------
 void testApp::update(){
-
+	
 	// on every frame 
 	// we reset the forces
 	// add in any forces on the particle
@@ -41,24 +41,25 @@ void testApp::update(){
 		particles[i].addForce(frc.x*2, frc.y*2);
 		particles[i].addDampingForce();
 		particles[i].update();
-	
+		
 	}
 	
 	//VF.fadeField(0.99f);
-
+	
 }
 
 //--------------------------------------------------------------
 void testApp::draw(){
 	
-
+	
 	ofEnableAlphaBlending();
 	ofSetColor(0,130,130, 200);
 	//VF.draw();
 	
-	ofSetColor(189,73,50,127);
+	
 	
 	for (int i = 0; i < particles.size(); i++){
+		ofSetColor(ofRandom(100,150),73,50,100);
 		particles[i].draw();
 	}
 	
