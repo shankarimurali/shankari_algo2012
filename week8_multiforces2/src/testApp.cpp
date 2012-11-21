@@ -76,7 +76,7 @@ void testApp::update(){
 void testApp::draw(){
 	
 	ofEnableAlphaBlending();
-	ofSetColor(355,85,80,30);
+	ofSetColor(343,81,45,30);
 	
 	for (int i = 0; i < springs.size(); i++){
 		springs[i].draw();
