@@ -12,16 +12,17 @@ void testApp::setup(){
 	ofBackground(255, 255, 255);
 	//ofSetBackgroundAuto(false);
 	scale=4;
-	image.loadImage("1_0.jpg");
+	image.loadImage("1.jpg");
 	image.setImageType(OF_IMAGE_COLOR);
 	imageWidth=image.width;
 	imageHeight=image.height;
 	
-	learnImage=true;
+
 	
 	
 	VF.setupField(60,40,ofGetWidth(), ofGetHeight());
-	
+
+	learnImage=true;
 	
 	
 }
@@ -43,14 +44,15 @@ void testApp::update(){
 		myParticles.clear();
 		for (int x = 0; x < imageWidth/scale; x++)
 			for(int y = 0; y < imageHeight/scale; y++){
+			
 				particle * p = new particle();
-				myParticles.push_back(p);
-				p->pos.set(ofGetWidth()/2-imageWidth/2+ x*scale, y*scale);
+				
+				p->pos.set(ofGetWidth()/2-imageWidth/2+ x*scale, ofGetHeight()/2-imageHeight/2+ y*scale);
 				p->size=scale;
 				ofColor pixelColor = imagePixels.getColor(x*scale, y*scale);
 				p->color.set(pixelColor);
 				
-				
+				myParticles.push_back(p);
 			}
 		
 		learnImage=false;
@@ -67,7 +69,7 @@ void testApp::update(){
 		
 		
 		myParticles[i]->addAttractionForce(mouseX,mouseY,20,1.0f);
-		myParticles[i]->addRepulsionForce(mouseX,mouseY,ofMap(mouseY, 0, ofGetHeight(), 1, 400, true),1.0f);
+		myParticles[i]->addRepulsionForce(mouseX,mouseY,ofMap(mouseY, 0, ofGetHeight(), 1, 200, true),1.0f);
 		
 		myParticles[i]->addDampingForce();
 		myParticles[i]->update();

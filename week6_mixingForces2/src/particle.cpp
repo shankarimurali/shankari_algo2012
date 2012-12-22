@@ -185,10 +185,8 @@ void particle::update(){
 
 //------------------------------------------------------------
 void particle::draw(){
-    //ofCircle(pos.x, pos.y, 3);
-	ofSetColor(color);
-	//ofRect(pos.x, pos.y, size, size);
-	ofTriangle(pos.x-size/2, pos.y, pos.x+size/2, pos.y, pos.x, pos.y-size);
+    ofSetColor(color);
+	ofTriangle(pos.x+size/2, pos.y+size, pos.x+size/2+size, pos.y+size, pos.x+size, pos.y);
 }
 
 
