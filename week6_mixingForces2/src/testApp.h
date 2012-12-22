@@ -25,6 +25,7 @@ public:
 	vector <particle *> myParticles;
 	vectorField VF;
 	ofImage image;
+	ofImage image2;
 	ofPixels imagePixels;
 	
 	float prevMouseX;

@@ -13,14 +13,13 @@ void testApp::setup(){
 	//ofSetBackgroundAuto(false);
 	scale=4;
 	image.loadImage("1.jpg");
+	image2.loadImage("1.jpg");
+	image2.setImageType(OF_IMAGE_COLOR);
 	image.setImageType(OF_IMAGE_COLOR);
 	imageWidth=image.width;
 	imageHeight=image.height;
 	
 
-	
-	
-	VF.setupField(60,40,ofGetWidth(), ofGetHeight());
 
 	learnImage=true;
 	
@@ -81,10 +80,12 @@ void testApp::update(){
 //--------------------------------------------------------------
 void testApp::draw(){
 	
-	
+
 	for (int i = 0; i < myParticles.size(); i++){
+		
 		myParticles[i]->draw();
 	}
+	
 	
 	
 }
