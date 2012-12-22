@@ -22,7 +22,7 @@ public:
 	void mouseReleased();
 	
 
-	ofImage images[67];
+	ofImage images[30];
 
 	int imageWidth;
 	int imageHeight;

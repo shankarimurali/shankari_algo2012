@@ -9,7 +9,7 @@ void testApp::setup(){
 	ofBackground(255, 255, 255);
 
 	
-	for (int i=0; i<67; i++) {
+	for (int i=0; i<30; i++) {
 		images[i].loadImage("screenshots/I_Page_"+ofToString(i+1)+".jpg");
 
 	}
@@ -29,17 +29,12 @@ void testApp::update(){
 void testApp::draw(){
 
 	images[count].draw(ofGetWidth()/2-imageWidth/2,ofGetHeight()/2-imageHeight/2,imageWidth,imageHeight);
-	count=count+vel;
+	count++;
 	
-	if (count>66) {
-		count=66;
-		vel=-1;
+	if (count>29) {
+		count=2;
 	}
-	else if(count<0)
-	{
-		count=0;
-		vel=1;
-	}
+
 	
 }
 
