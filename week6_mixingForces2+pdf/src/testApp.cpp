@@ -100,7 +100,7 @@ void testApp::keyPressed  (int key){
 		learnImage=true;
 	}
 	if( key=='p'){
-			ofSetFrameRate(12);  // so it doesn't generate tons of pages
+			ofSetFrameRate(10);
 			ofBeginSaveScreenAsPDF(ofGetTimestampString()+".pdf", true);
 	
 	}
