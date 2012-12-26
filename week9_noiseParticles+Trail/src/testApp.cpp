@@ -83,10 +83,10 @@ void testApp::draw(){
 	
 	
 	//NF.draw();
-	if(ofGetFrameNum()%23==0)
-	{
-	ofSaveFrame(true);
-	}
+//	if(ofGetFrameNum()%23==0)
+//	{
+//	ofSaveFrame(true);
+//	}
 	ofEnableAlphaBlending();
 	ofSetColor(0,130,130, 200);
 	
